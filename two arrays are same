@@ -1,0 +1,30 @@
+def check_arrays_same(arr1, arr2):
+    if len(arr1) != len(arr2):
+        return False
+    
+    for i in range(len(arr1)):
+        if arr1[i] != arr2[i]:
+            return False
+    
+    return True
+
+def main():
+    size = int(input("Enter how many values you want to read: "))
+    arr1 = []
+    arr2 = []
+    
+    print("For array 1:")
+    for i in range(size):
+        arr1.append(int(input(f"Enter the value of a[{i}]: ")))
+    
+    print("For array 2:")
+    for i in range(size):
+        arr2.append(int(input(f"Enter the value of b[{i}]: ")))
+    
+    if check_arrays_same(arr1, arr2):
+        print("Arrays are the same.")
+    else:
+        print("Arrays are not the same.")
+
+if __name__ == "__main__":
+    main()
